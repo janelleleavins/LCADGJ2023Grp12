@@ -17,7 +17,7 @@ public class SimonSays : MonoBehaviour
     public GameObject neighborModel3;
 
     List<GameObject> gameButtons;
-    int promptCount = 4; //how many it asks at first
+    int promptCount; //how many it asks at first
     GameObject opponent;
 
     List<int> prompts;
@@ -38,6 +38,7 @@ public class SimonSays : MonoBehaviour
     {
         gameButtons = new List<GameObject>();
         opponent = neighborModel1;
+        promptCount = 4;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
         CreateGameButton(2, new Vector3(-66, -66));
@@ -49,6 +50,7 @@ public class SimonSays : MonoBehaviour
     {
         gameButtons = new List<GameObject>();
         opponent = neighborModel2;
+        promptCount = 5;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
         CreateGameButton(2, new Vector3(-66, -66));
@@ -62,6 +64,7 @@ public class SimonSays : MonoBehaviour
     {
         gameButtons = new List<GameObject>();
         opponent = neighborModel3;
+        promptCount = 6;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
         CreateGameButton(2, new Vector3(-66, -66));
