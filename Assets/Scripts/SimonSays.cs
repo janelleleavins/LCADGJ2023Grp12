@@ -11,9 +11,14 @@ public class SimonSays : MonoBehaviour
     public GameObject gameButtonPrefab;
     public List<ButtonSetting> buttonSettings;
     public Transform gameFieldPanelTransform;
+    public GameObject playerModel;
+    public GameObject neighborModel1;
+    public GameObject neighborModel2;
+    public GameObject neighborModel3;
 
     List<GameObject> gameButtons;
-    int promptCount = 4;
+    int promptCount = 4; //how many it asks at first
+    GameObject opponent;
 
     List<int> prompts;
     List<int> playerInputs;
@@ -22,24 +27,49 @@ public class SimonSays : MonoBehaviour
 
     bool inputEnabled = false;
     int completedRounds = 0;
-    bool gameOver = false;
+    //bool gameOver = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        //TODO: change the number of buttons dependent on the level. check for progress then update?
+        //if player collides w neighbormodel1, call makeroundone
+    }
+
+    public void MakeRoundOne()
+    {
         gameButtons = new List<GameObject>();
+        opponent = neighborModel1;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
         CreateGameButton(2, new Vector3(-66, -66));
         CreateGameButton(3, new Vector3(66, -66));
-        //if stage 2:
-        //CreateGameButton(4, new Vector3(-200, 0));
-        //CreateGameButton(5, new Vector3(200, 0));
-        //if stage 3:
-        //CreateGameButton(6, new Vector3(0, -200));
-        //CreateGameButton(7, new Vector3(0, 200));
+        StartCoroutine(MiniGame());
+    }
 
+    public void MakeRoundTwo()
+    {
+        gameButtons = new List<GameObject>();
+        opponent = neighborModel2;
+        CreateGameButton(0, new Vector3(-66, 66));
+        CreateGameButton(1, new Vector3(66, 66));
+        CreateGameButton(2, new Vector3(-66, -66));
+        CreateGameButton(3, new Vector3(66, -66));
+        CreateGameButton(4, new Vector3(-200, 0));
+        CreateGameButton(5, new Vector3(200, 0));
+        StartCoroutine(MiniGame());
+    }
+
+    public void MakeRoundThree()
+    {
+        gameButtons = new List<GameObject>();
+        opponent = neighborModel3;
+        CreateGameButton(0, new Vector3(-66, 66));
+        CreateGameButton(1, new Vector3(66, 66));
+        CreateGameButton(2, new Vector3(-66, -66));
+        CreateGameButton(3, new Vector3(66, -66));
+        CreateGameButton(4, new Vector3(-200, 0));
+        CreateGameButton(5, new Vector3(200, 0));
+        CreateGameButton(6, new Vector3(0, -200));
+        CreateGameButton(7, new Vector3(0, 200));
         StartCoroutine(MiniGame());
     }
 
@@ -47,7 +77,7 @@ public class SimonSays : MonoBehaviour
     {
         inputEnabled = false;
 
-        rg = new System.Random("test".GetHashCode());
+        rg = new System.Random("Generator".GetHashCode());
 
         SetPrompts();
 
@@ -119,7 +149,7 @@ public class SimonSays : MonoBehaviour
 
         if (prompts[playerInputs.Count - 1] != index)
         {
-            Debug.Log("Try again!"); //TODO: Show player they messed up
+            Encourage();
             StartCoroutine(MiniGame());
         }
         if(prompts.Count == playerInputs.Count)
@@ -140,8 +170,30 @@ public class SimonSays : MonoBehaviour
 
     void GameOver()
     {
-        gameOver = true; //TODO: Close Simon Says UI
+        //gameOver = true;
+        //"closes" Simon Says UI
+        for( int i = 0; i < gameButtons.Count; i++ )
+        {
+            Destroy(gameButtons[i]);
+        }
+
+        Destroy(opponent);
+
+        Celebrate();
+
         inputEnabled = false;
         completedRounds = 0;
+    }
+
+    void Encourage()
+    {
+        //TODO: tell player to try again
+        Debug.Log("Try again!");
+    }
+    void Celebrate()
+    {
+        //TODO: tell player they did a good job :3
+        //show opponent going back inside or something??
+        Debug.Log("Good job!");
     }
 }

@@ -19,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 movement;
 
     bool isGrounded = true;
+    bool hasWings = false;
+
+    public SimonSays simonSays;
+    private int heightLimit = 6;
 
     // Update is called once per frame
     void Update()
@@ -46,9 +50,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Fly()
     {
-        // TODO: if wings earned, jump infintiely. otherwise, jump depending on whether they are already on the ground
         if (isGrounded)
         {
+            rb.velocity += Vector3.up * jumpSpeed;
+        }
+        else if (hasWings & transform.position.y < heightLimit)
+        {
+            Debug.Log(transform.position.y + " " + heightLimit);
             rb.velocity += Vector3.up * jumpSpeed;
         }
 
@@ -60,6 +68,20 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        if (collision.gameObject == simonSays.neighborModel1)
+        {
+            simonSays.MakeRoundOne();
+        }
+        else if (collision.gameObject == simonSays.neighborModel2)
+        {
+            simonSays.MakeRoundTwo();
+        }
+        else if (collision.gameObject == simonSays.neighborModel3)
+        {
+            simonSays.MakeRoundThree();
+        }
+            
     }
 
 
