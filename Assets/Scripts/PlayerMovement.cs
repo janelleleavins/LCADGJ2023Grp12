@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Singleton instance of the player.
+    public static PlayerMovement instance = null;
+
     // Handles all player movement
     [SerializeField] private Rigidbody rb;
 
@@ -16,13 +19,16 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 6f;
     private float jumpSpeed = 5;
 
-    public Vector3 movement;
-
     bool isGrounded = true;
     bool hasWings = false;
 
-    public SimonSays simonSays;
+    public GameManager simonSays;
     private int heightLimit = 6;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Update is called once per frame
     void Update()
@@ -72,18 +78,34 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject == simonSays.neighborModel1)
         {
             simonSays.MakeRoundOne();
+            freezePlayer();
+
+
         }
         else if (collision.gameObject == simonSays.neighborModel2)
         {
             simonSays.MakeRoundTwo();
+            freezePlayer();
         }
         else if (collision.gameObject == simonSays.neighborModel3)
         {
             simonSays.MakeRoundThree();
+            freezePlayer();
         }
             
     }
 
+    void freezePlayer()
+    {
+        speed = 0;
+        jumpSpeed = 0;
+    }
+
+    public void unfreezePlayer()
+    {
+        speed = 6f;
+        jumpSpeed = 5;
+    }
 
     void OnCollisionExit(Collision collision)
     {
