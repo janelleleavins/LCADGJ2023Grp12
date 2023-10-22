@@ -28,54 +28,57 @@ public class InteractableObject : MonoBehaviour
 
     private void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.transform.position);
+        if (player != null)
+        {
+            float distance = Vector3.Distance(transform.position, player.transform.position);
 
-        if (distance <= interactionDistance)
-        {
-            isInRange = true;
-            popupText.SetActive(true);
-        }
-        else
-        {
-            isInRange = false;
-            popupText.SetActive(false);
-        }
-
-        if (isInRange && Input.GetKeyDown(KeyCode.E))
-        {
-            if (!hasSpoken)
+            if (distance <= interactionDistance)
             {
-                GetComponent<DialogueTrigger>().TriggerDialogue();
-                PlayerMovement.instance.freezePlayer();
-                hasSpoken = true;
+                isInRange = true;
+                popupText.SetActive(true);
             }
-            else if (hasSpoken && !isBeat)
+            else
             {
-                StartMinigame();
-                PlayerMovement.instance.freezePlayer();
+                isInRange = false;
+                popupText.SetActive(false);
             }
-            else if (hasSpoken && isBeat && hasPrize)
-            {
-                if (gameObject.CompareTag("Fairy"))
-                {
-                    PlayerMovement.instance.giveHorns();
-                }
-                else if (gameObject.CompareTag("Vampire"))
-                {
-                    PlayerMovement.instance.giveWings();
-                }
-                else if (gameObject.CompareTag("Wizard"))
-                {
-                    //TODO: special something! idk! animation for bone ???
-                }
-                else
-                {
-                    Debug.Log("fix opponent tags");
-                }
 
-                treatPrize.SetActive(false);
-                victoryMessage.GetComponent<SpriteRenderer>().sprite = farewell;
-                hasPrize = false;
+            if (isInRange && Input.GetKeyDown(KeyCode.E))
+            {
+                if (!hasSpoken)
+                {
+                    GetComponent<DialogueTrigger>().TriggerDialogue();
+                    PlayerMovement.instance.freezePlayer();
+                    hasSpoken = true;
+                }
+                else if (hasSpoken && !isBeat)
+                {
+                    StartMinigame();
+                    PlayerMovement.instance.freezePlayer();
+                }
+                else if (hasSpoken && isBeat && hasPrize)
+                {
+                    if (gameObject.CompareTag("Fairy"))
+                    {
+                        PlayerMovement.instance.giveHorns();
+                    }
+                    else if (gameObject.CompareTag("Vampire"))
+                    {
+                        PlayerMovement.instance.giveWings();
+                    }
+                    else if (gameObject.CompareTag("Wizard"))
+                    {
+                        //TODO: special something! idk! animation for bone ???
+                    }
+                    else
+                    {
+                        Debug.Log("fix opponent tags");
+                    }
+
+                    treatPrize.SetActive(false);
+                    victoryMessage.GetComponent<SpriteRenderer>().sprite = farewell;
+                    hasPrize = false;
+                }
             }
         }
     }

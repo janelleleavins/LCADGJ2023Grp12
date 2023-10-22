@@ -63,12 +63,15 @@ public class PlayerMovement : MonoBehaviour
         {
             playerSprite.flipX = false;
             facingRight = false;
-
         }
         else if (MoveVector.x > 0 && !facingRight)
         {
             playerSprite.flipX = true;
             facingRight = true;
+        }
+        else
+        {
+            //
         }
     }
 
