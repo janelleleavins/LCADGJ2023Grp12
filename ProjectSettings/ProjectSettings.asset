@@ -153,7 +153,10 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.DefaultCompany.LCADGJ2023Grp12
+    Standalone: com.DefaultCompany.LCADGJ2023Grp12
+    iPhone: com.DefaultCompany.LCADGJ2023Grp12
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -896,7 +899,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: LCADGJ2023Grp12
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -904,7 +907,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: LCADGJ2023Grp12
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: LCADGJ2023Grp12
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

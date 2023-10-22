@@ -17,13 +17,13 @@ public class PlayerMovement : MonoBehaviour
 
     //private float gravity = 20f;
     private float speed = 6f;
-    private float jumpSpeed = 5;
+    private float jumpSpeed = 4;
 
     bool isGrounded = true;
-    bool hasWings = false;
+    bool hasWings = true;
 
     public GameManager simonSays;
-    private int heightLimit = 6;
+    private int heightLimit = 4;
 
     private void Awake()
     {
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         Walk();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Fly();
+            Jump();
         }
     }
 
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         // flips model depending on the way they move ?
     }
 
-    private void Fly()
+    private void Jump()
     {
         if (isGrounded)
         {
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (hasWings & transform.position.y < heightLimit)
         {
-            Debug.Log(transform.position.y + " " + heightLimit);
+            //Debug.Log(transform.position.y + " " + heightLimit);
             rb.velocity += Vector3.up * jumpSpeed;
         }
 
@@ -79,8 +79,6 @@ public class PlayerMovement : MonoBehaviour
         {
             simonSays.MakeRoundOne();
             freezePlayer();
-
-
         }
         else if (collision.gameObject == simonSays.neighborModel2)
         {
@@ -92,7 +90,11 @@ public class PlayerMovement : MonoBehaviour
             simonSays.MakeRoundThree();
             freezePlayer();
         }
-            
+        else if (collision.gameObject.CompareTag("Drop"))
+        {
+            transform.position = new Vector3(0, 1, 0); //CHANGE
+        }
+
     }
 
     void freezePlayer()

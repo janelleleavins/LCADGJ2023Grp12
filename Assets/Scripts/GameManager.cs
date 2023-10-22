@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject neighborModel3;
 
     public Animator animator;
-    public GameObject textPopUp;
+    public GameObject textBox;
 
     List<GameObject> gameButtons;
     int promptCount; //how many it asks at first
@@ -30,6 +30,13 @@ public class GameManager : MonoBehaviour
 
     bool inputEnabled = false;
     int completedRounds = 0;
+
+    private void Start()
+    {
+        animator.GameObject().SetActive(false);
+        textBox.SetActive(false);
+
+    }
 
     private void Awake()
     {
@@ -189,7 +196,7 @@ public class GameManager : MonoBehaviour
 
     void Encourage()
     {
-        textPopUp.SetActive(true);
+        animator.gameObject.SetActive(true);
         animator.SetTrigger("Bounce");
         Debug.Log("Try again!");
     }
