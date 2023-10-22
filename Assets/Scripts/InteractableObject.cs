@@ -1,24 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class InteractableObject : MonoBehaviour
 {
     public float interactionDistance = 2f; // popup distance
-
-    public SpriteRenderer characterSprite;
-    
-    public Sprite firstSprite;
-    public Sprite secondSprite;
-    public Sprite thirdSprite;
-
     public GameObject popupText;
     public GameObject player;
-
-    bool spokenTo = true;
-    bool isImpressed = false;
-    bool isBeat = false;
-
     private bool isInRange = false;
 
     private void Start()
@@ -42,34 +29,10 @@ public class InteractableObject : MonoBehaviour
         }
 
         //  E key is pressed
-        if (isInRange && !isBeat && Input.GetKeyDown(KeyCode.E))
+        if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (!spokenTo)
-            {
-                //trigger dialogue
-                spokenTo = true;
-            }
-            else
-            {
-                StartMinigame();
-            }
-        }
-
-    }
-
-    private void StartMinigame()
-    {
-        if (gameObject.CompareTag("Fairy"))
-        {
-            GameManager.instance.MakeRoundOne();
-        }
-        if (gameObject.CompareTag("Vampire"))
-        {
-            GameManager.instance.MakeRoundTwo();
-        }
-        if (gameObject.CompareTag("Wizard"))
-        {
-            GameManager.instance.MakeRoundThree();
+            // call some function that does the thing here
+            Debug.Log("Interacted with the object.");
         }
     }
 }
