@@ -205,6 +205,5 @@ public class GameManager : MonoBehaviour
         //TODO: tell player they did a good job :3
         //show opponent going back inside or something??
         Debug.Log("Good job!");
-        
     }
 }

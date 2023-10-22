@@ -21,12 +21,17 @@ public class PlayerMovement : MonoBehaviour
 
     bool isGrounded = true;
     bool hasWings = true;
+    bool hasHorns = false;
     bool facingRight = true;
 
     public SpriteRenderer playerSprite;
 
     public Sprite defaultSprite;
+    public Sprite wingsSprite;
+    public Sprite hornsWingsSprite;
     public Sprite jumpSprite;
+    public Sprite flyingSprite;
+    public Sprite hornsFlyingSprite;
 
     public DialogueHandler dialogueHandler;
     private int heightLimit = 4;
@@ -74,8 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (hasWings & transform.position.y < heightLimit)
         {
-            //Debug.Log(transform.position.y + " " + heightLimit);
-            rb.velocity += Vector3.up * jumpSpeed;
+            rb.velocity += Vector3.up * jumpSpeed; //this wonky afffff
         }
 
     }
@@ -85,29 +89,18 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            //change sprite to landed sprite
+            if (!hasWings)
+            {
+                playerSprite.sprite = defaultSprite;
+            }
+            else if (hasWings && hasHorns)
+            {
+                playerSprite.sprite = hornsWingsSprite;
+            }
+            else{
+                playerSprite.sprite = wingsSprite;
+            }
         }
-
-        //if (collision.gameObject == simonSays.neighborModel1)
-        //{
-        //    simonSays.MakeRoundOne();
-        //    freezePlayer();
-        //}
-        //else if (collision.gameObject == simonSays.neighborModel2)
-        //{
-        //    simonSays.MakeRoundTwo();
-        //    freezePlayer();
-        //}
-        //else if (collision.gameObject == simonSays.neighborModel3)
-        //{
-        //    simonSays.MakeRoundThree();
-        //    freezePlayer();
-        //}
-        //else if (collision.gameObject.CompareTag("Drop"))
-        //{
-        //    transform.position = new Vector3(0, 1, 0); //CHANGE
-        //}
-
     }
 
     void freezePlayer()
@@ -127,7 +120,19 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
-            //change sprite to jumped sprite
+            if(!hasWings)
+            {
+                playerSprite.sprite = jumpSprite;
+            }
+            else if(hasWings && hasHorns)
+            {
+                playerSprite.sprite = hornsFlyingSprite;
+            }
+            else
+            {
+                playerSprite.sprite = flyingSprite;
+            }
+                
         }
     }
 }

@@ -14763,12 +14763,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c8faacf7c4f8236469dd691cdd6118c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16a1dd725f5a11d4d984726cbf09ac8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -18291,8 +18291,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1737944340}
   playerSprite: {fileID: 1324945346}
+<<<<<<< HEAD
   defaultSprite: {fileID: 0}
   jumpSprite: {fileID: 0}
+=======
+  defaultSprite: {fileID: 21300000, guid: 16a1dd725f5a11d4d984726cbf09ac8b, type: 3}
+  wingsSprite: {fileID: 21300000, guid: 16a1dd725f5a11d4d984726cbf09ac8b, type: 3}
+  hornsWingsSprite: {fileID: 21300000, guid: 16a1dd725f5a11d4d984726cbf09ac8b, type: 3}
+  jumpSprite: {fileID: 21300000, guid: 869823483b94dad49a076c4cd7fa349f, type: 3}
+  flyingSprite: {fileID: 21300000, guid: 869823483b94dad49a076c4cd7fa349f, type: 3}
+  hornsFlyingSprite: {fileID: 21300000, guid: 869823483b94dad49a076c4cd7fa349f, type: 3}
+>>>>>>> 1cba34964fe560e3f78720ed1a245b05c3139227
   dialogueHandler: {fileID: 1555393637}
 --- !u!54 &1737944340
 Rigidbody:
