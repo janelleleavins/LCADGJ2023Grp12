@@ -33,9 +33,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        //TODO: shift camera
         animator.GameObject().SetActive(false);
-        //textBox.SetActive(false);
-
     }
 
     private void Awake()
@@ -167,6 +166,10 @@ public class GameManager : MonoBehaviour
             completedRounds++;
             if (completedRounds < 3)
             {
+                if(completedRounds == 2)
+                {
+                    //TODO: Change sprite to impressed
+                }
                 StartCoroutine(MiniGame());
             }
             else
@@ -186,7 +189,7 @@ public class GameManager : MonoBehaviour
         }
 
         PlayerMovement.instance.unfreezePlayer();
-        Destroy(opponent);
+        //TODO: Change sprite to beat
 
         Celebrate();
 

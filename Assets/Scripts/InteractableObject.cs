@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,16 @@ public class InteractableObject : MonoBehaviour
     public GameObject popupText;
     public GameObject player;
     private bool isInRange = false;
+
+    public GameManager simonSays;
+
+    public Sprite baseSprite;
+    public Sprite impressedSprite;
+    public Sprite beatSprite;
+
+    public bool hasSpoken = false;
+    public bool isImpressed = false;
+    public bool isBeat = false;
 
     private void Start()
     {
@@ -28,12 +39,38 @@ public class InteractableObject : MonoBehaviour
             popupText.SetActive(false);
         }
 
-        //  E key is pressed
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            // call some function that does the thing here
-            Debug.Log("Interacted with the object.");
+            if (!hasSpoken)
+            {
+                //TODO: trigger dialogue
+            }
+            if (hasSpoken && !isBeat)
+            {
+                StartMinigame();
+            }
         }
+    }
+
+    private void StartMinigame()
+    {
+        if (gameObject.CompareTag("Vampire"))
+        {
+            simonSays.MakeRoundOne();
+        }
+        if (gameObject.CompareTag("Fairy"))
+        {
+            simonSays.MakeRoundTwo();
+        }
+        if (gameObject.CompareTag("Wizard"))
+        {
+            simonSays.MakeRoundThree();
+        }
+    }
+
+    public void UpdateSprite()
+    {
+        //TODO: change sprite
     }
 }
 

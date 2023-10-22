@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 74154573}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Opponent
+  m_TagString: Vampire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,6 +261,12 @@ MonoBehaviour:
   interactionDistance: 3
   popupText: {fileID: 1580034151}
   player: {fileID: 233833932}
+  baseSprite: {fileID: 0}
+  impressedSprite: {fileID: 0}
+  beatSprite: {fileID: 0}
+  hasSpoken: 1
+  isImpressed: 0
+  isBeat: 0
 --- !u!1 &233833932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 806936623805517622, guid: 2aa373d17da525444ad1324dde17a0cd, type: 3}
@@ -10274,7 +10280,7 @@ GameObject:
   - component: {fileID: 984011164}
   m_Layer: 0
   m_Name: Capsule (2)
-  m_TagString: Opponent
+  m_TagString: Wizard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10773,7 +10779,7 @@ GameObject:
   - component: {fileID: 1386117236}
   m_Layer: 0
   m_Name: Capsule (1)
-  m_TagString: Opponent
+  m_TagString: Fairy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
