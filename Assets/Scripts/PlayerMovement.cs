@@ -24,7 +24,10 @@ public class PlayerMovement : MonoBehaviour
     bool facingRight = true;
 
     public SpriteRenderer playerSprite;
-    public GameManager simonSays;
+
+    public Sprite defaultSprite;
+    public Sprite jumpSprite;
+
     public DialogueHandler dialogueHandler;
     private int heightLimit = 4;
 
@@ -82,27 +85,28 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            //change sprite to landed sprite
         }
 
-        if (collision.gameObject == simonSays.neighborModel1)
-        {
-            simonSays.MakeRoundOne();
-            freezePlayer();
-        }
-        else if (collision.gameObject == simonSays.neighborModel2)
-        {
-            simonSays.MakeRoundTwo();
-            freezePlayer();
-        }
-        else if (collision.gameObject == simonSays.neighborModel3)
-        {
-            simonSays.MakeRoundThree();
-            freezePlayer();
-        }
-        else if (collision.gameObject.CompareTag("Drop"))
-        {
-            transform.position = new Vector3(0, 1, 0); //CHANGE
-        }
+        //if (collision.gameObject == simonSays.neighborModel1)
+        //{
+        //    simonSays.MakeRoundOne();
+        //    freezePlayer();
+        //}
+        //else if (collision.gameObject == simonSays.neighborModel2)
+        //{
+        //    simonSays.MakeRoundTwo();
+        //    freezePlayer();
+        //}
+        //else if (collision.gameObject == simonSays.neighborModel3)
+        //{
+        //    simonSays.MakeRoundThree();
+        //    freezePlayer();
+        //}
+        //else if (collision.gameObject.CompareTag("Drop"))
+        //{
+        //    transform.position = new Vector3(0, 1, 0); //CHANGE
+        //}
 
     }
 
@@ -123,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+            //change sprite to jumped sprite
         }
     }
 }
