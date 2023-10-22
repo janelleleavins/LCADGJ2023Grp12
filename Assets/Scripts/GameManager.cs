@@ -206,21 +206,6 @@ public class GameManager : MonoBehaviour
     }
     void Celebrate()
     {
-        if (opponent == fairy)
-        {
-            PlayerMovement.instance.giveHorns();
-        }
-        else if (opponent == vampire)
-        {
-            PlayerMovement.instance.giveWings();
-        }
-        else if (opponent == wizard)
-        {
-            //TODO: special something! idk! animation for bone ???
-        }
-        else
-        {
-            Debug.Log("you should not be here .");
-        }
+        //something juicy
     }
 }

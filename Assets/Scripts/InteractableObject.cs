@@ -16,6 +16,8 @@ public class InteractableObject : MonoBehaviour
     public Sprite impressedSprite;
     public Sprite beatSprite;
 
+    public Sprite farewell;
+
     public GameObject victoryMessage;
     public GameObject treatPrize;
 
@@ -28,7 +30,7 @@ public class InteractableObject : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
-        if (distance <= interactionDistance && !isBeat)
+        if (distance <= interactionDistance)
         {
             isInRange = true;
             popupText.SetActive(true);
@@ -52,7 +54,7 @@ public class InteractableObject : MonoBehaviour
                 StartMinigame();
                 PlayerMovement.instance.freezePlayer();
             }
-            else if (hasPrize)
+            else if (hasSpoken && isBeat && hasPrize)
             {
                 if (gameObject.CompareTag("Fairy"))
                 {
@@ -71,6 +73,7 @@ public class InteractableObject : MonoBehaviour
                     Debug.Log("fix opponent tags");
                 }
                 treatPrize.SetActive(false);
+                victoryMessage.GetComponent<SpriteRenderer>().sprite = farewell;
                 hasPrize = false;
             }
         }

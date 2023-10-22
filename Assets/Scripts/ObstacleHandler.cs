@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleHandler : MonoBehaviour
 {
-    public float interactionDistance = 2f; // popup distance
+    public float interactionDistance = 5f; // popup distance
     public GameObject popupText;
     public ParticleSystem fireParticles;
     public GameObject player;
