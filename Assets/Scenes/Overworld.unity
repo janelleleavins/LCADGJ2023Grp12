@@ -1860,6 +1860,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -3732,6 +3736,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 44879c5c72c9370478c4c9bd5cc75586, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ac6be1ea35b7d445a30d492d1040b9c, type: 2}
     - target: {fileID: 919132149155446097, guid: 44879c5c72c9370478c4c9bd5cc75586, type: 3}
       propertyPath: m_Name
       value: VampHouseLarge
@@ -4322,7 +4330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.9638095
+      value: -4.963809
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.z
@@ -4368,6 +4376,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a6bc1d08adf0f448a525ea07ac101c8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -7393,6 +7405,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a6bc1d08adf0f448a525ea07ac101c8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -7946,6 +7962,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a6bc1d08adf0f448a525ea07ac101c8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -9576,6 +9596,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a6bc1d08adf0f448a525ea07ac101c8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -14235,7 +14259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.9638095
+      value: -4.963809
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.z
@@ -14281,6 +14305,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -16487,6 +16515,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -21411,6 +21443,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a6bc1d08adf0f448a525ea07ac101c8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -22337,6 +22373,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -22488,6 +22528,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -23307,6 +23351,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -27437,6 +27485,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a6bc1d08adf0f448a525ea07ac101c8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -28522,7 +28574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.9638095
+      value: -4.963809
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.z
@@ -28568,6 +28620,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a6bc1d08adf0f448a525ea07ac101c8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -29341,6 +29397,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -31106,7 +31166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.9638095
+      value: -4.963809
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.z
@@ -31152,6 +31212,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -32038,6 +32102,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -32717,6 +32785,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -33686,6 +33758,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a6bc1d08adf0f448a525ea07ac101c8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -33793,7 +33869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.9638095
+      value: -4.963809
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.z
@@ -33839,6 +33915,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -34020,7 +34100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.9638095
+      value: -4.963809
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.z
@@ -34066,6 +34146,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -34178,7 +34262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.9638095
+      value: -4.963809
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.z
@@ -34224,6 +34308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -35859,7 +35947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.9638095
+      value: -4.963809
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_LocalScale.z
@@ -35905,6 +35993,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba70ec56e77b524abf8d331cc0deef8, type: 2}
     - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
       propertyPath: m_Name
       value: VampHouseSmall
@@ -36405,6 +36497,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8d44f0223f16fba4e91193c75f1434a3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b836075b331cf5947976a98a0e9f6d62, type: 2}
     - target: {fileID: 919132149155446097, guid: 8d44f0223f16fba4e91193c75f1434a3, type: 3}
       propertyPath: m_Name
       value: VampHouseDoor
@@ -41769,7 +41865,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3661639628750336703, guid: 63e0a1cd614b2b14f9b66f098b1bf885, type: 3}
+  - {fileID: 2100000, guid: 2a17d5d798aa7fa4b983fe177c12c1c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
