@@ -21,7 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     bool isGrounded = true;
     bool hasWings = true;
+    bool facingRight = true;
 
+    public SpriteRenderer playerSprite;
     public GameManager simonSays;
     public DialogueHandler dialogueHandler;
     private int heightLimit = 4;
@@ -47,12 +49,18 @@ public class PlayerMovement : MonoBehaviour
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput) * speed;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
 
-        //TODO: if flips, call turn
-    }
+        if (Input.GetAxis("Horizontal") < 0 && facingRight)
+        {
+            
+            playerSprite.flipX = false;
+            facingRight = false;
 
-    private void Turn()
-    {
-        // flips model depending on the way they move ?
+        }
+        else if (Input.GetAxis("Horizontal") > 0 && !facingRight)
+        {
+            playerSprite.flipX = true;
+            facingRight = true;
+        }
     }
 
     private void Jump()
