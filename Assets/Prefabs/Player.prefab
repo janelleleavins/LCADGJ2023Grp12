@@ -158,9 +158,9 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 16a1dd725f5a11d4d984726cbf09ac8b, type: 3}
   wingsSprite: {fileID: 21300000, guid: 5cd4dd2dfa755e449a68bb02a91d73aa, type: 3}
   hornsSprite: {fileID: 21300000, guid: c8e7bdce96437604683814f0c9aceb29, type: 3}
-  jumpSprite: {fileID: 21300000, guid: b2b8363e134a08540b1d01fdfca17189, type: 3}
-  flyingSprite: {fileID: 21300000, guid: a9bba08aff90a8e4a9fbd05d45f08080, type: 3}
-  hornsJumpSprite: {fileID: 21300000, guid: df8e0ec318d7adb439a0a7f60f7991bc, type: 3}
+  jumpSprite: {fileID: 21300000, guid: 148f21cd5a7257341b984cfee2ab90a6, type: 3}
+  flyingSprite: {fileID: 21300000, guid: 7ab66a177a1c22a4da3d40d607932ddd, type: 3}
+  hornsJumpSprite: {fileID: 21300000, guid: d01df6357d1b42a47a22f357d0486f56, type: 3}
   attackSprite: {fileID: 21300000, guid: 782ff4d690a968e409f6a9d0eb2f8f7d, type: 3}
 --- !u!1 &3675056018337209035
 GameObject:

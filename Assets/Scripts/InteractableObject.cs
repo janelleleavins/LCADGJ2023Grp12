@@ -72,6 +72,7 @@ public class InteractableObject : MonoBehaviour
                 {
                     Debug.Log("fix opponent tags");
                 }
+
                 treatPrize.SetActive(false);
                 victoryMessage.GetComponent<SpriteRenderer>().sprite = farewell;
                 hasPrize = false;
@@ -103,7 +104,7 @@ public class InteractableObject : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = beatSprite;
 
-        victoryMessage.SetActive(true);
+        victoryMessage.GetComponent<SpriteRenderer>().enabled = true;
         treatPrize.SetActive(true);
 
         isBeat = true;
