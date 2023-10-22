@@ -59,14 +59,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput) * speed;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
 
-        if (Input.GetAxis("Horizontal") < 0 && facingRight)
+        if (MoveVector.x < 0 && facingRight)
         {
-            
             playerSprite.flipX = false;
             facingRight = false;
 
         }
-        else if (Input.GetAxis("Horizontal") > 0 && !facingRight)
+        else if (MoveVector.x > 0 && !facingRight)
         {
             playerSprite.flipX = true;
             facingRight = true;
@@ -75,13 +74,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (isGrounded)
+        if (isGrounded || hasWings)
         {
             rb.velocity += Vector3.up * jumpSpeed;
-        }
-        else if (hasWings)
-        {
-            rb.velocity += Vector3.up * jumpSpeed; //this wonky afffff
         }
 
     }
@@ -125,6 +120,19 @@ public class PlayerMovement : MonoBehaviour
     {
         hasWings = true;
         playerSprite.sprite = wingsSprite;
+    }
+
+    public void attackSprites()
+    {
+        playerSprite.flipX = true;
+        if (playerSprite.sprite == attackSprite)
+        {
+            playerSprite.sprite = hornsSprite;
+        }
+        else
+        {
+            playerSprite.sprite = attackSprite;
+        }
     }
 
     public void cameraShift()

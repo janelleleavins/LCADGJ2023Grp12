@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,14 +16,13 @@ public class InteractableObject : MonoBehaviour
     public Sprite impressedSprite;
     public Sprite beatSprite;
 
+    public GameObject victoryMessage;
+    public GameObject treatPrize;
+
     public bool hasSpoken = false;
     public bool isImpressed = false;
     public bool isBeat = false;
-
-    private void Start()
-    {
-        popupText.SetActive(false);
-    }
+    public bool hasPrize = false;
 
     private void Update()
     {
@@ -52,6 +52,27 @@ public class InteractableObject : MonoBehaviour
                 StartMinigame();
                 PlayerMovement.instance.freezePlayer();
             }
+            else if (hasPrize)
+            {
+                if (gameObject.CompareTag("Fairy"))
+                {
+                    PlayerMovement.instance.giveHorns();
+                }
+                else if (gameObject.CompareTag("Vampire"))
+                {
+                    PlayerMovement.instance.giveWings();
+                }
+                else if (gameObject.CompareTag("Wizard"))
+                {
+                    //TODO: special something! idk! animation for bone ???
+                }
+                else
+                {
+                    Debug.Log("fix opponent tags");
+                }
+                treatPrize.SetActive(false);
+                hasPrize = false;
+            }
         }
     }
 
@@ -78,7 +99,12 @@ public class InteractableObject : MonoBehaviour
     public void defeatSprite()
     {
         GetComponent<SpriteRenderer>().sprite = beatSprite;
+
+        victoryMessage.SetActive(true);
+        treatPrize.SetActive(true);
+
         isBeat = true;
+        hasPrize = true;
     }
 }
 
