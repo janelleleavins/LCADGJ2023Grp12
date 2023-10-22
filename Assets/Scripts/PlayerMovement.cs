@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     bool hasWings = true;
 
     public GameManager simonSays;
+    public DialogueHandler dialogueHandler;
     private int heightLimit = 4;
 
     private void Awake()

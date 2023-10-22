@@ -6,6 +6,8 @@ using UnityEngine;
 public class Dialogue
 {
     public string name; //speaker
-    public string[] dialogue;
+
+    [TextArea(3, 10)]
+    public string[] sentences;
 
 }

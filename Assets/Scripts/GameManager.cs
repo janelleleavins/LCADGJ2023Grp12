@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         animator.GameObject().SetActive(false);
-        textBox.SetActive(false);
+        //textBox.SetActive(false);
 
     }
 
