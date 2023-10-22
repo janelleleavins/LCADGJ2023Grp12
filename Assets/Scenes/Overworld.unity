@@ -1592,6 +1592,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 44879c5c72c9370478c4c9bd5cc75586, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4b2e996571324d4f874aea9968a9ffc, type: 2}
     - target: {fileID: 919132149155446097, guid: 44879c5c72c9370478c4c9bd5cc75586, type: 3}
       propertyPath: m_Name
       value: VampHouseLarge
@@ -3351,6 +3355,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ec9faa769e888114b9ace65ccf5a7a70, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: efbf8c71a059a284ba709223bf30cee4, type: 2}
     - target: {fileID: 919132149155446097, guid: ec9faa769e888114b9ace65ccf5a7a70, type: 3}
       propertyPath: m_Name
       value: Spikes_02
@@ -4844,6 +4852,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dd8b65db0d399e5439d061918ef2ada9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: efbf8c71a059a284ba709223bf30cee4, type: 2}
     - target: {fileID: 919132149155446097, guid: dd8b65db0d399e5439d061918ef2ada9, type: 3}
       propertyPath: m_Name
       value: VampColumns
@@ -10382,6 +10394,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 600985ea55e78f9449b4744fef1badd6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d21a321776e54540ac8f9891641a972, type: 2}
     - target: {fileID: 919132149155446097, guid: 600985ea55e78f9449b4744fef1badd6, type: 3}
       propertyPath: m_Name
       value: VampRoof
@@ -10678,6 +10694,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39ab7e76cabef9e4fb147a69ad720eee, type: 3}
   m_PrefabInstance: {fileID: 1300315626}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &991669938
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.323643
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.743295
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.323643
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 136.38913
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.5331793
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 73cf8eb8e4cd15e4d8baa83c81dee140, type: 2}
+    - target: {fileID: 919132149155446097, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
+      propertyPath: m_Name
+      value: VampHouseSmall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f161b9046a6a2574591f2bcfbe095656, type: 3}
 --- !u!1001 &992099480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14682,7 +14771,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1332720902
@@ -18202,7 +18291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1737944340}
   playerSprite: {fileID: 1324945346}
-  simonSays: {fileID: 62144076}
+  defaultSprite: {fileID: 0}
+  jumpSprite: {fileID: 0}
   dialogueHandler: {fileID: 1555393637}
 --- !u!54 &1737944340
 Rigidbody:
@@ -19673,6 +19763,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8d44f0223f16fba4e91193c75f1434a3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6362fee27f852754e8e71d811319ec34, type: 2}
     - target: {fileID: 919132149155446097, guid: 8d44f0223f16fba4e91193c75f1434a3, type: 3}
       propertyPath: m_Name
       value: VampHouseDoor
@@ -22851,3 +22945,4 @@ SceneRoots:
   - {fileID: 821903447}
   - {fileID: 900920472}
   - {fileID: 1692246225}
+  - {fileID: 991669938}
