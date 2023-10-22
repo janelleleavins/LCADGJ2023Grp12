@@ -8,7 +8,7 @@ public class DropHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.position += new Vector3(0, 1, 0);
+            collision.gameObject.transform.position += new Vector3(-40, 1, 0);
         }
 
     }
