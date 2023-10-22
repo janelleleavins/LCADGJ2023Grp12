@@ -11,10 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject gameButtonPrefab;
     public List<ButtonSetting> buttonSettings;
     public Transform gameFieldPanelTransform;
-    public GameObject playerModel;
-    public GameObject neighborModel1;
-    public GameObject neighborModel2;
-    public GameObject neighborModel3;
+    public GameObject player;
+    public GameObject fairy;
+    public GameObject vampire;
+    public GameObject wizard;
 
     public Animator animator;
     public GameObject textBox;
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //TODO: shift camera
+        PlayerMovement.instance.cameraShift();
         animator.GameObject().SetActive(false);
     }
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     public void MakeRoundOne()
     {
         gameButtons = new List<GameObject>();
-        opponent = neighborModel1;
+        opponent = fairy;
         promptCount = 4;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     public void MakeRoundTwo()
     {
         gameButtons = new List<GameObject>();
-        opponent = neighborModel2;
+        opponent = vampire;
         promptCount = 5;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     public void MakeRoundThree()
     {
         gameButtons = new List<GameObject>();
-        opponent = neighborModel3;
+        opponent = wizard;
         promptCount = 6;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
@@ -164,11 +164,11 @@ public class GameManager : MonoBehaviour
         if(prompts.Count == playerInputs.Count)
         {
             completedRounds++;
-            if (completedRounds < 3)
+            if (completedRounds < 2)
             {
-                if(completedRounds == 2)
+                if(completedRounds == 1)
                 {
-                    //TODO: Change sprite to impressed
+                    opponent.GetComponent<InteractableObject>().impressSprite();
                 }
                 StartCoroutine(MiniGame());
             }
@@ -189,7 +189,8 @@ public class GameManager : MonoBehaviour
         }
 
         PlayerMovement.instance.unfreezePlayer();
-        //TODO: Change sprite to beat
+        //PlayerMovement.instance.cameraShift();
+        opponent.GetComponent<InteractableObject>().defeatSprite();
 
         Celebrate();
 
@@ -205,9 +206,21 @@ public class GameManager : MonoBehaviour
     }
     void Celebrate()
     {
-        //TODO: tell player they did a good job :3
-        //show opponent going back inside or something??
-        Debug.Log("Good job!");
-        
+        if (opponent == fairy)
+        {
+            PlayerMovement.instance.giveHorns();
+        }
+        else if (opponent == vampire)
+        {
+            PlayerMovement.instance.giveWings();
+        }
+        else if (opponent == wizard)
+        {
+            //TODO: special something! idk! animation for bone ???
+        }
+        else
+        {
+            Debug.Log("you should not be here .");
+        }
     }
 }

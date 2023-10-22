@@ -51,5 +51,6 @@ public class DialogueHandler : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
         gameObject.SetActive(false);
+        PlayerMovement.instance.unfreezePlayer();
     }
 }

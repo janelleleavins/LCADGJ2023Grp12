@@ -28,7 +28,7 @@ public class InteractableObject : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
-        if (distance <= interactionDistance)
+        if (distance <= interactionDistance && !isBeat)
         {
             isInRange = true;
             popupText.SetActive(true);
@@ -43,22 +43,25 @@ public class InteractableObject : MonoBehaviour
         {
             if (!hasSpoken)
             {
-                //TODO: trigger dialogue
+                GetComponent<DialogueTrigger>().TriggerDialogue();
+                PlayerMovement.instance.freezePlayer();
+                hasSpoken = true;
             }
-            if (hasSpoken && !isBeat)
+            else if (hasSpoken && !isBeat)
             {
                 StartMinigame();
+                PlayerMovement.instance.freezePlayer();
             }
         }
     }
 
     private void StartMinigame()
     {
-        if (gameObject.CompareTag("Vampire"))
+        if (gameObject.CompareTag("Fairy"))
         {
             simonSays.MakeRoundOne();
         }
-        if (gameObject.CompareTag("Fairy"))
+        if (gameObject.CompareTag("Vampire"))
         {
             simonSays.MakeRoundTwo();
         }
@@ -68,9 +71,14 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    public void UpdateSprite()
+    public void impressSprite()
     {
-        //TODO: change sprite
+        GetComponent<SpriteRenderer>().sprite = impressedSprite;
+    }
+    public void defeatSprite()
+    {
+        GetComponent<SpriteRenderer>().sprite = beatSprite;
+        isBeat = true;
     }
 }
 

@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Handles all player movement
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private Camera cam;
 
     private Vector3 PlayerMovementInput;
 
@@ -19,21 +20,23 @@ public class PlayerMovement : MonoBehaviour
     private float jumpSpeed = 4;
 
     bool isGrounded = true;
-    bool hasWings = true;
-    bool hasHorns = false;
+    public bool hasWings = false;
+    public bool hasHorns = false;
     bool facingRight = true;
+
+    bool isEngaged = false;
 
     public SpriteRenderer playerSprite;
 
     public Sprite defaultSprite;
     public Sprite wingsSprite;
-    public Sprite hornsWingsSprite;
+    public Sprite hornsSprite;
     public Sprite jumpSprite;
     public Sprite flyingSprite;
-    public Sprite hornsFlyingSprite;
+    public Sprite hornsJumpSprite;
+    public Sprite attackSprite;
 
-    public DialogueHandler dialogueHandler;
-    private int heightLimit = 4;
+    //public DialogueHandler dialogueHandler; why is dis here.
 
     private void Awake()
     {
@@ -76,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += Vector3.up * jumpSpeed;
         }
-        else if (hasWings & transform.position.y < heightLimit)
+        else if (hasWings)
         {
             rb.velocity += Vector3.up * jumpSpeed; //this wonky afffff
         }
@@ -88,21 +91,21 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            if (!hasWings)
+            if (!hasHorns)
             {
                 playerSprite.sprite = defaultSprite;
             }
             else if (hasWings && hasHorns)
             {
-                playerSprite.sprite = hornsWingsSprite;
+                playerSprite.sprite = wingsSprite;
             }
             else{
-                playerSprite.sprite = wingsSprite;
+                playerSprite.sprite = hornsSprite;
             }
         }
     }
 
-    void freezePlayer()
+    public void freezePlayer()
     {
         speed = 0;
         jumpSpeed = 0;
@@ -113,23 +116,45 @@ public class PlayerMovement : MonoBehaviour
         speed = 6f;
         jumpSpeed = 5;
     }
+    public void giveHorns()
+    {
+        hasHorns = true;
+        playerSprite.sprite = hornsSprite;
+    }
+    public void giveWings()
+    {
+        hasWings = true;
+        playerSprite.sprite = wingsSprite;
+    }
+
+    public void cameraShift()
+    {
+        if (isEngaged)
+        {
+            //TODO: shift camera for battle
+        }
+        else
+        {
+            //cam.Reset(); //resets camera after battle
+        }
+    }
 
     void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
-            if(!hasWings)
+            if(!hasHorns)
             {
                 playerSprite.sprite = jumpSprite;
             }
             else if(hasWings && hasHorns)
             {
-                playerSprite.sprite = hornsFlyingSprite;
+                playerSprite.sprite = flyingSprite;
             }
             else
             {
-                playerSprite.sprite = flyingSprite;
+                playerSprite.sprite = hornsJumpSprite;
             }
                 
         }
