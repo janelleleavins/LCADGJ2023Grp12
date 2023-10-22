@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
@@ -68,7 +69,7 @@ public class InteractableObject : MonoBehaviour
                     }
                     else if (gameObject.CompareTag("Wizard"))
                     {
-                        //TODO: special something! idk! animation for bone ???
+                        SceneManager.LoadScene(2);
                     }
                     else
                     {

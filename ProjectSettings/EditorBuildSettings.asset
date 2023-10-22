@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Overworld.unity
     guid: 49ae2b2de1251fc4ca913108ad5f78fe
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 96aa9a74a55f28847bd65b13d6a8e43d
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

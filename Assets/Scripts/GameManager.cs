@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         gameButtons = new List<GameObject>();
         opponent = vampire;
-        promptCount = 5;
+        promptCount = 4;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
         CreateGameButton(2, new Vector3(-66, -66));
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
     {
         gameButtons = new List<GameObject>();
         opponent = wizard;
-        promptCount = 6;
+        promptCount = 5;
         CreateGameButton(0, new Vector3(-66, 66));
         CreateGameButton(1, new Vector3(66, 66));
         CreateGameButton(2, new Vector3(-66, -66));
